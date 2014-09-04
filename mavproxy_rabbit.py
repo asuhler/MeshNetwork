@@ -145,7 +145,7 @@ class Rabbit(mp_module.MPModule):
                                                mavutil.mavlink.MAV_CMD_NAV_WAYPOINT,
                                                2, 0, 1, 0, 0, 0,
                                                lat, lon, alt)
-            self.master.mav.set_mode_send(self.master.target_system, mavutil.mavlink.MAV_MODE_FLAG_CUSTOM_MODE_ENABLED, 8) #4 for copters, #8 for planes
+            self.master.mav.set_mode_send(self.master.target_system, mavutil.mavlink.MAV_MODE_FLAG_CUSTOM_MODE_ENABLED, 4) #4 for copters, #8 for planes
         else:
             print "Failed to enter arguments correctly: Usage: Loiter lat lon alt"
             return
